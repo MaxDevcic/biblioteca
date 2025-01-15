@@ -1,13 +1,17 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>pago</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="pagar libro"></app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pago</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
+  <ion-item>
+    <ion-label>Titulo del libro: *******</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Vas a buscarlo el dd/mm/yyyy</ion-label>
+  </ion-item>
+    <ion-label>Lo devuelves el dd/mm/yyyy</ion-label>
+  <ion-item>
+    <ion-label>Hay que pagar: $*******</ion-label>
+  </ion-item>
+  <ion-button routerLink="/Agradecimiento">
+    Pagar Libro
+  </ion-button>
 </ion-content>
