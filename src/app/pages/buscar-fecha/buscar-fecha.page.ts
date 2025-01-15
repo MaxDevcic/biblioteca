@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   standalone: false
 })
 export class BuscarFechaPage implements OnInit {
+  //fechaRet: Date = new Date();
+  //fechaDev: Date = new Date();
 
   constructor() { }
 

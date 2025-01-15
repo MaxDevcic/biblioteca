@@ -1,13 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>buscarFecha</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="buscar fecha"></app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">buscarFecha</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Fecha para retirar libro</ion-label>
+      <ion-datetime></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha para devolver libro</ion-label>
+      <ion-datetime></ion-datetime>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button routerLink="/seleccionar-libro">
+    Siguiente
+  </ion-button>
 </ion-content>

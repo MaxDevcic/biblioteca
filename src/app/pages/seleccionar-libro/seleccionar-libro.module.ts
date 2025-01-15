@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { SeleccionarLibroPageRoutingModule } from './seleccionar-libro-routing.module';
 
 import { SeleccionarLibroPage } from './seleccionar-libro.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SeleccionarLibroPageRoutingModule
+    SeleccionarLibroPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [SeleccionarLibroPage]
 })
