@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { BuscarFechaPageRoutingModule } from './buscar-fecha-routing.module';
 
 import { BuscarFechaPage } from './buscar-fecha.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    BuscarFechaPageRoutingModule
+    BuscarFechaPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [BuscarFechaPage]
 })

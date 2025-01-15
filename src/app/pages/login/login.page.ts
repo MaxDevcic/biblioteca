@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
+  nombre: string="";
+  contrasena: string="";
+
   constructor() { }
 
   ngOnInit() {
   }
 
 }
+

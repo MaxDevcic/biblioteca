@@ -1,5 +1,23 @@
 <app-header titulo="Inicio Sesión"></app-header>
 
 <ion-content >
-  
+  <ion-list>
+    
+    <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" 
+                    [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" 
+                    [(ngModel)]="contrasena"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button routerLink="/buscar-fecha">
+    Siguiente
+  </ion-button>
 </ion-content>
