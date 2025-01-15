@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'seleccionar-libro',
     loadChildren: () => import('./pages/seleccionar-libro/seleccionar-libro.module').then( m => m.SeleccionarLibroPageModule)
   },
+  {
+    path: 'pago',
+    loadChildren: () => import('./pages/pago/pago.module').then( m => m.PagoPageModule)
+  },
 ];
 
 @NgModule({
