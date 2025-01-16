@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { BuscarFechaPageRoutingModule } from './buscar-fecha-routing.module';
+import { HistorialPageRoutingModule } from './historial-routing.module';
 
-import { BuscarFechaPage } from './buscar-fecha.page';
+import { HistorialPage } from './historial.page';
 import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from 'src/app/components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    BuscarFechaPageRoutingModule,
+    HistorialPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [BuscarFechaPage]
+  declarations: [HistorialPage]
 })
-export class BuscarFechaPageModule {}
+export class HistorialPageModule {}
