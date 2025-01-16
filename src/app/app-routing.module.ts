@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'historial',
     loadChildren: () => import('./pages/historial/historial.module').then( m => m.HistorialPageModule)
   },
+  {
+    path: 'escaneo',
+    loadChildren: () => import('./pages/escaneo/escaneo.module').then( m => m.EscaneoPageModule)
+  },
 ];
 
 @NgModule({
