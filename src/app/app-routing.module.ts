@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'escaneo',
     loadChildren: () => import('./pages/escaneo/escaneo.module').then( m => m.EscaneoPageModule)
   },
+  {
+    path: 'registrar-usuario',
+    loadChildren: () => import('./pages/registrar-usuario/registrar-usuario.module').then( m => m.RegistrarUsuarioPageModule)
+  },
 ];
 
 @NgModule({

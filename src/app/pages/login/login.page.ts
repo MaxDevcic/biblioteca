@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from 'src/app/services/storageservice.service';
 
 @Component({
   selector: 'app-login',
@@ -8,12 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  nombre: string="";
-  contrasena: string="";
+  usuario={
+    username:'',
+    password:''
+  }
 
-  constructor() { }
+  constructor(private servicio:StorageService) { }
 
   ngOnInit() {
+  }
+
+  login(){
+  console.log("Hola");
+  this.guardar();    
+  }
+
+  async guardar(){
+    await this.servicio.set(this.usuario.username, this.usuario);
+  }
+
+  async traer(){
+    console.log(this.servicio.get('xxxxx'));
   }
 
 }
