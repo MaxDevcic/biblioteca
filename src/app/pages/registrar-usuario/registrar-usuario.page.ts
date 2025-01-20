@@ -30,6 +30,6 @@ export class RegistrarUsuarioPage implements OnInit {
     }
   
     async traer(){
-      console.log(this.servicio.get('xxxxx'));
+      console.log(this.servicio.get('20456789-0'));
     }
 }

@@ -31,6 +31,6 @@ export class LoginPage implements OnInit {
   async traer(){
     console.log(this.servicio.get('xxxxx'));
   }
-
+  
 }
 
