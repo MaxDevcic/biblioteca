@@ -20,17 +20,22 @@ export class LoginPage implements OnInit {
   }
 
   login(){
-  console.log("Hola");
-  this.guardar();    
-  }
-
-  async guardar(){
-    await this.servicio.set(this.usuario.username, this.usuario);
+    console.log("Hola");
+    this.traer();
   }
 
   async traer(){
-    console.log(this.servicio.get('xxxxx'));
+    if(this.usuario.username){
+
+    }
+    let usr=this.servicio.get(this.usuario.username);
+    console.log(usr);
+    
   }
-  
+
+  async buscar(){
+
+  }
+
 }
 
