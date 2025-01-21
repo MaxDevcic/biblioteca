@@ -25,12 +25,8 @@ export class LoginPage implements OnInit {
   }
 
   async traer(){
-    if(this.usuario.username){
-
-    }
     let usr=this.servicio.get(this.usuario.username);
     console.log(usr);
-    
   }
 
   async buscar(){
