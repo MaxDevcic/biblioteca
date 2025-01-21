@@ -25,7 +25,7 @@ export class StorageService {
   }
 
   public get(key:any){
-    const datos = this.storage.get(key);
+    let datos = this.storage?.get(key);
     return datos;
   }
 
