@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from 'src/app/services/storageservice.service';
+import { Usuario } from 'src/app/interfaces/usuario';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registrar-usuario',
@@ -9,27 +11,40 @@ import { StorageService } from 'src/app/services/storageservice.service';
 })
 export class RegistrarUsuarioPage implements OnInit {
 
-  usuario={
+  usuario: Usuario ={
     username:'',
     password:'',
     rut:''
   }
 
-  constructor(private servicio:StorageService) { }
+  datosusuario: any;
+
+  constructor(private servicio:StorageService, private router: Router) { }
 
   ngOnInit() {
   }
 
-  login(){
-    console.log("Registrado");
-      this.guardar();    
+  crearCuenta(){
+    let datos = this.servicio.get(this.usuario.username)
+    console.log("Leyendo");
+    console.log(datos);
+    if (datos!==undefined){
+      datos.then(value=>{
+        console.log(value);
+        if(value==null){
+          this.guardar();
+        }
+      });
     }
+  }
+
+  guardar(){
+    console.log("Guardado!!!");
+    this.servicio.set(this.usuario.username, this.usuario);
+    this.router.navigate(['/login']);
+  }
   
-    async guardar(){
-      await this.servicio.set(this.usuario.username, this.usuario);
-    }
-  
-    async traer(){
-      console.log(this.servicio.get('20456789-0'));
-    }
-}
+    /* async traer(){
+      console.log(this.servicio.get());
+    } */
+  }
