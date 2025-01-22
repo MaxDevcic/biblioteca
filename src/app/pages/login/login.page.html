@@ -14,13 +14,20 @@
         <ion-input required type="password" name="pass" [(ngModel)]="usuario.password"></ion-input>
       </ion-item>
       
-      <ion-button class="ion-text-capitalize" type="submit" [disabled]="miformulario.invalid">
-        inicar sesión (como arrendatario)
-      </ion-button>
+        <ion-button class="ion-text-capitalize" type="submit" [disabled]="miformulario.invalid" >
+          inicar sesión
+        </ion-button>
 
-      <ion-button routerLink="/login-arrendatario" class="ion-text-capitalize">
-        inicar sesión como arrendador
-      </ion-button>
+        <ion-button routerLink="/login-arrendatario">
+          inicar sesión como arrendador
+        </ion-button> 
+      
+      <ion-item lines="none">
+        <ion-label routerLink="/registrar-usuario" class="ion-text-center">
+          Crear cuenta
+        </ion-label>
+      </ion-item>
+      
     </ion-list>
 
 
