@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Storage } from '@ionic/storage-angular';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,11 +25,9 @@ export class StorageService {
     this._storage?.set(key, value);
   }
 
-  public get(key:any){
+  public get(key: any) {
     let datos = this.storage?.get(key);
     return datos;
   }
-
-  
 
 }
