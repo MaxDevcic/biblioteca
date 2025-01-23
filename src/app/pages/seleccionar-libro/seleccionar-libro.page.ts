@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Libros } from 'src/app/interfaces/libros';
+import { StorageService } from 'src/app/services/storageservice.service';
 
 @Component({
   selector: 'app-seleccionar-libro',
@@ -7,11 +10,18 @@ import { Component, OnInit } from '@angular/core';
   standalone: false
 })
 export class SeleccionarLibroPage implements OnInit {
-  nombre: string="";
+
+  libro: Libros={
+    codigo:"",
+    nombre:"",
+  }
   
-  constructor() { }
+  constructor(private library:StorageService, private router: Router) { }
 
   ngOnInit() {
-  }
+      
+  } 
 
+
+  
 }

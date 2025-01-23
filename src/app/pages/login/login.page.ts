@@ -1,4 +1,4 @@
-import { Usuario } from './../../interfaces/usuario';
+import { Usuario } from 'src/app/interfaces/usuario';
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from 'src/app/services/storageservice.service';
 import { Router } from '@angular/router';

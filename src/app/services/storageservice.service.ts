@@ -29,5 +29,4 @@ export class StorageService {
     let datos = this.storage?.get(key);
     return datos;
   }
-
 }
